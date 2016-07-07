@@ -1,0 +1,90 @@
+
+# directories (by name)
+
+include/b64/
+include/shwild/
+include/xcover/
+include/xtests/
+
+src/b64/
+src/shwild/
+src/xcover/
+src/xtests/
+
+_internal/
+
+bin/
+
+doc/
+
+ideas/
+
+perf_test/
+
+releases/
+
+scripts/internal/
+
+Debug/
+DebugMt/
+DebugDll/
+DebugDLLUNIX/
+Debug Multithreaded/
+Debug Multithreaded DLL/
+Unicode Debug/
+Unicode Debug Multithreaded/
+Unicode Debug Multithreaded DLL/
+Release/
+ReleaseMt/
+ReleaseDll/
+ReleaseDLLUNIX/
+Release Multithreaded/
+Release Multithreaded DLL/
+Unicode Release/
+Unicode Release Multithreaded/
+Unicode Release Multithreaded DLL/
+
+vc71/
+vc8/
+vc9/
+
+# directories (by pattern)
+
+# files (by name)
+
+list_changes.cmd
+prepare.cmd
+
+# files (by pattern)
+
+*~
+*.a
+*.app
+*.dll
+*.dylib
+*.exe
+*.gch
+*.ilk
+*.lib
+*.log
+*.ncb
+*.o
+*.obj
+*.opensdf
+*.opt
+*.out
+*.pch
+*.pdb
+*.sdf
+*.sbr
+*.scc
+*.so
+*.suo
+*.swp
+*.vcproj*.user
+*.vcxproj*.user
+
+*.vc71.sln
+*.vc8.sln
+*.vc9.sln
+
