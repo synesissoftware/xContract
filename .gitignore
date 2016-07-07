@@ -52,8 +52,14 @@ vc9/
 
 # files (by name)
 
+.update_deps
+
 list_changes.cmd
 prepare.cmd
+update_deps.cmd
+
+build/makefile.tmpl
+build/makefile.tools.xml
 
 # files (by pattern)
 
