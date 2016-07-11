@@ -4,11 +4,11 @@
  * Purpose:     Handles detection of platform.
  *
  * Created:     5th February 2012
- * Updated:     5th February 2012
+ * Updated:     11th July 2016
  *
  * Home:        http://xcontract.org/
  *
- * Copyright (c) 2012, Matthew Wilson and Synesis Software
+ * Copyright (c) 2012-2016, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -57,7 +57,7 @@
      defined(unix__) || \
      defined(__unix) || \
      defined(__unix__)
- /* We include threading.h to prevent the definition of _REENTRANT standard
+ /* We include features.h to prevent the definition of _REENTRANT standard
   * headers on some UNIX operating systems from confusing the feature
   * discrimination in UNIXSTL and having it think that we're multithreading
   * when we're not.
