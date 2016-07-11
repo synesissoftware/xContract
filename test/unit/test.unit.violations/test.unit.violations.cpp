@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the test.unit.violations project.
  *
  * Created:     26th September 2008
- * Updated:     5th February 2012
+ * Updated:     11th July 2016
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2008-2012, Synesis Software Pty Ltd.
+ *              Copyright (c) 2008-2016, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -117,6 +117,12 @@ namespace
         DEFINE_ITEM(intermediateAssumption),
     };
 
+	int
+	always_true()
+	{
+		return 1;
+	}
+
 } // anonymous namespace
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -208,7 +214,7 @@ namespace
         using xtests::c::xtests_writeFailMessage;
         using xtests::c::xtestsComparisonEqual;
         using xtests::c::xtests_testMultibyteStrings;
-        using xtests::c::cpp::xtests_test_integer;
+        using xtests::cpp::xtests_test_integer;
 
         int r = system((argv0 + " " + conditionName + " >" + logFileName).c_str());
 
@@ -271,7 +277,7 @@ namespace
     }
     static void exercise_unexpectedCondition()
     {
-        if(1) // Design break
+        if(always_true()) // Design break
         {
             XCONTRACT_ENFORCE_UNEXPECTED_CONDITION("test_1_0");
         }
@@ -418,7 +424,7 @@ namespace
             }
 
         private:
-            const int mustBeZero;
+            int const mustBeZero;
         };
 
         type    instance;
