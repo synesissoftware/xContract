@@ -4,8 +4,8 @@
 # Purpose:  Makefile for the xContract:C project, for the Arturius C/C++ Compiler Multiplexer
 #           compiler, on Win32
 #
-# Created:  15th Feburary 2005
-# Updated:  4th July 2010
+# Created:  15th February 2005
+# Updated:  11th July 2006
 #
 ############################################################################
 
@@ -22,6 +22,7 @@ OS_TAG				=
 PROJ_TAG			=	xcontract
 PROJ_VER_MAJOR		=   0
 PROJ_TAG_VER		=   $(PROJ_TAG).$(PROJ_VER_MAJOR)
+COMP_ARCH_OS_TAG	=	$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
 
 SHWILD_VER_MAJOR	=	0
 SHWILD_TAG_VER		=	shwild.$(SHWILD_VER_MAJOR)
@@ -395,19 +396,19 @@ XTESTS_HEADERS=\
 # Libraries
 
 # core
-LIB_CORE_DEBUG		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.lib
+LIB_CORE_DEBUG		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).debug.lib
 
-LIB_CORE_RELEASE		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).lib
+LIB_CORE_RELEASE		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).lib
 
 # shwild
-LIB_SHWILD_DEBUG   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.lib
+LIB_SHWILD_DEBUG   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).debug.lib
 
-LIB_SHWILD_RELEASE   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).lib
+LIB_SHWILD_RELEASE   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).lib
 
 # xtests
-LIB_XTESTS_DEBUG	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.lib
+LIB_XTESTS_DEBUG	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).debug.lib
 
-LIB_XTESTS_RELEASE	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).lib
+LIB_XTESTS_RELEASE	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).lib
 
 ########################################
 # Examples
@@ -430,8 +431,8 @@ LIB_XTESTS_RELEASE	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_
 ##############################
 # Component Tests
 
-TARG_TEST_UNIT_violations_DEBUG	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.exe
-TARG_TEST_UNIT_violations_RELEASE	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).exe
+TARG_TEST_UNIT_violations_DEBUG	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).debug.exe
+TARG_TEST_UNIT_violations_RELEASE	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).exe
 
 ############################################################
 # Objects
@@ -504,8 +505,8 @@ OBJ_XTESTS_RELEASE=\
 ##############################
 # Component Tests
 
-TARG_TEST_UNIT_violations_DEBUG	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.exe
-TARG_TEST_UNIT_violations_RELEASE	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).exe
+TARG_TEST_UNIT_violations_DEBUG	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).debug.exe
+TARG_TEST_UNIT_violations_RELEASE	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).exe
 
 ##############################
 # Scratch Tests

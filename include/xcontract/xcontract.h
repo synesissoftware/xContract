@@ -4,11 +4,11 @@
  * Purpose:     Main header file for the xContract library.
  *
  * Created:     2nd January 2001
- * Updated:     7th July 2016
+ * Updated:     11th July 2016
  *
  * Home:        http://xcontract.org/
  *
- * Copyright (c) 2001-2016, Matthew Wilson and Synesis Software
+ * Copyright (c) 2001-2012, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -50,7 +50,7 @@
 #ifndef XCONTRACT_DOCUMENTATION_SKIP_SECTION
 # define XCONTRACT_VER_XCONTRACT_H_XCONTRACT_MAJOR       2
 # define XCONTRACT_VER_XCONTRACT_H_XCONTRACT_MINOR       5
-# define XCONTRACT_VER_XCONTRACT_H_XCONTRACT_REVISION    5
+# define XCONTRACT_VER_XCONTRACT_H_XCONTRACT_REVISION    6
 # define XCONTRACT_VER_XCONTRACT_H_XCONTRACT_EDIT        183
 #endif /* !XCONTRACT_DOCUMENTATION_SKIP_SECTION */
 
@@ -74,9 +74,9 @@
 
 #define XCONTRACT_VER_MAJOR         0
 #define XCONTRACT_VER_MINOR         3
-#define XCONTRACT_VER_REVISION      9
+#define XCONTRACT_VER_REVISION      10
 
-#define XCONTRACT_VER               0x000309ff
+#define XCONTRACT_VER               0x00030aff
 
 /* /////////////////////////////////////////////////////////////////////////
  * Includes

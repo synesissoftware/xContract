@@ -4,8 +4,8 @@
 # Purpose:  Makefile for the xContract:C project, for the Intel C/C++ Compiler v8.0
 #           compiler, on Win32
 #
-# Created:  15th Feburary 2005
-# Updated:  4th July 2010
+# Created:  15th February 2005
+# Updated:  11th July 2006
 #
 ############################################################################
 
@@ -30,6 +30,7 @@ OS_TAG				=
 PROJ_TAG			=	xcontract
 PROJ_VER_MAJOR		=   0
 PROJ_TAG_VER		=   $(PROJ_TAG).$(PROJ_VER_MAJOR)
+COMP_ARCH_OS_TAG	=	$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
 
 SHWILD_VER_MAJOR	=	0
 SHWILD_TAG_VER		=	shwild.$(SHWILD_VER_MAJOR)
@@ -499,43 +500,43 @@ XTESTS_HEADERS=\
 # Libraries
 
 # core
-LIB_CORE_MT_D		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.lib
+LIB_CORE_MT_D		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).mt.debug.lib
 
-LIB_CORE_DLL_D		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.debug.lib
+LIB_CORE_DLL_D		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).dll.debug.lib
 
-LIB_CORE_DLL_R		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.lib
+LIB_CORE_DLL_R		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).dll.lib
 
-LIB_CORE_MT_R		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.lib
+LIB_CORE_MT_R		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).mt.lib
 
-LIB_CORE_ST_D		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.lib
+LIB_CORE_ST_D		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).debug.lib
 
-LIB_CORE_ST_R		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).lib
+LIB_CORE_ST_R		=   $(PROJ_LIB_DIR)\$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).lib
 
 # shwild
-LIB_SHWILD_MT_D   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.lib
+LIB_SHWILD_MT_D   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.debug.lib
 
-LIB_SHWILD_DLL_D   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.debug.lib
+LIB_SHWILD_DLL_D   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).dll.debug.lib
 
-LIB_SHWILD_DLL_R   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.lib
+LIB_SHWILD_DLL_R   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).dll.lib
 
-LIB_SHWILD_MT_R   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.lib
+LIB_SHWILD_MT_R   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.lib
 
-LIB_SHWILD_ST_D   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.lib
+LIB_SHWILD_ST_D   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).debug.lib
 
-LIB_SHWILD_ST_R   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).lib
+LIB_SHWILD_ST_R   =   $(PROJ_LIB_DIR)\$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).lib
 
 # xtests
-LIB_XTESTS_MT_D	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.lib
+LIB_XTESTS_MT_D	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.debug.lib
 
-LIB_XTESTS_DLL_D	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.debug.lib
+LIB_XTESTS_DLL_D	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).dll.debug.lib
 
-LIB_XTESTS_DLL_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.lib
+LIB_XTESTS_DLL_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).dll.lib
 
-LIB_XTESTS_MT_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.lib
+LIB_XTESTS_MT_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.lib
 
-LIB_XTESTS_ST_D	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.lib
+LIB_XTESTS_ST_D	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).debug.lib
 
-LIB_XTESTS_ST_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).lib
+LIB_XTESTS_ST_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).lib
 
 ########################################
 # Examples
@@ -558,12 +559,12 @@ LIB_XTESTS_ST_R	=   $(PROJ_LIB_DIR)\$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG
 ##############################
 # Component Tests
 
-TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.exe
-TARG_TEST_UNIT_violations_DLL_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.debug.exe
-TARG_TEST_UNIT_violations_DLL_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.exe
-TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.exe
-TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.exe
-TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).exe
+TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt.debug.exe
+TARG_TEST_UNIT_violations_DLL_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).dll.debug.exe
+TARG_TEST_UNIT_violations_DLL_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).dll.exe
+TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt.exe
+TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).debug.exe
+TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).exe
 
 ############################################################
 # Objects
@@ -724,12 +725,12 @@ OBJ_XTESTS_ST_R=\
 ##############################
 # Component Tests
 
-TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.exe
-TARG_TEST_UNIT_violations_DLL_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.debug.exe
-TARG_TEST_UNIT_violations_DLL_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).dll.exe
-TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.exe
-TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.exe
-TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).exe
+TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt.debug.exe
+TARG_TEST_UNIT_violations_DLL_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).dll.debug.exe
+TARG_TEST_UNIT_violations_DLL_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).dll.exe
+TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt.exe
+TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).debug.exe
+TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)\$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).exe
 
 ##############################
 # Scratch Tests

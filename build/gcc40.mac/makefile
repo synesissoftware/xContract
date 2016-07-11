@@ -4,8 +4,8 @@
 # Purpose:  Makefile for the xContract:C project, for the GCC 4.0
 #           compiler, on UNIX
 #
-# Created:  15th Feburary 2005
-# Updated:  4th July 2010
+# Created:  15th February 2005
+# Updated:  11th July 2006
 #
 ############################################################################
 
@@ -22,6 +22,7 @@ OS_TAG				=
 PROJ_TAG			=	xcontract
 PROJ_VER_MAJOR		=   0
 PROJ_TAG_VER		=   $(PROJ_TAG).$(PROJ_VER_MAJOR)
+COMP_ARCH_OS_TAG	=	$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
 
 SHWILD_VER_MAJOR	=	0
 SHWILD_TAG_VER		=	shwild.$(SHWILD_VER_MAJOR)
@@ -443,31 +444,31 @@ XTESTS_HEADERS=\
 # Libraries
 
 # core
-LIB_CORE_MT_D		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.a
+LIB_CORE_MT_D		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).mt.debug.a
 
-LIB_CORE_MT_R		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.a
+LIB_CORE_MT_R		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).mt.a
 
-LIB_CORE_ST_D		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.a
+LIB_CORE_ST_D		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).debug.a
 
-LIB_CORE_ST_R		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).a
+LIB_CORE_ST_R		=   $(PROJ_LIB_DIR)/lib$(PROJ_TAG_VER).core.$(COMP_ARCH_OS_TAG).a
 
 # shwild
-LIB_SHWILD_MT_D   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.a
+LIB_SHWILD_MT_D   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.debug.a
 
-LIB_SHWILD_MT_R   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.a
+LIB_SHWILD_MT_R   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.a
 
-LIB_SHWILD_ST_D   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.a
+LIB_SHWILD_ST_D   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).debug.a
 
-LIB_SHWILD_ST_R   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).a
+LIB_SHWILD_ST_R   =   $(PROJ_LIB_DIR)/lib$(SHWILD_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).a
 
 # xtests
-LIB_XTESTS_MT_D	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug.a
+LIB_XTESTS_MT_D	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.debug.a
 
-LIB_XTESTS_MT_R	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.a
+LIB_XTESTS_MT_R	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).mt.a
 
-LIB_XTESTS_ST_D	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug.a
+LIB_XTESTS_ST_D	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).debug.a
 
-LIB_XTESTS_ST_R	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).a
+LIB_XTESTS_ST_R	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_ARCH_OS_TAG).a
 
 ########################################
 # Examples
@@ -490,10 +491,10 @@ LIB_XTESTS_ST_R	=   $(PROJ_LIB_DIR)/lib$(XTESTS_TAG_VER).xctrct.$(COMP_TAG)$(OS_
 ##############################
 # Component Tests
 
-TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug
-TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt
-TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug
-TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
+TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt.debug
+TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt
+TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).debug
+TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG)
 
 ############################################################
 # Objects
@@ -610,10 +611,10 @@ OBJ_XTESTS_ST_R=\
 ##############################
 # Component Tests
 
-TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt.debug
-TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).mt
-TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG).debug
-TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_TAG)$(OS_TAG)$(ARCH_TAG)
+TARG_TEST_UNIT_violations_MT_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt.debug
+TARG_TEST_UNIT_violations_MT_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).mt
+TARG_TEST_UNIT_violations_ST_D	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG).debug
+TARG_TEST_UNIT_violations_ST_R	=	$(PROJ_BIN_DIR)/$(PROJ_TAG_VER).test.unit.violations.$(COMP_ARCH_OS_TAG)
 
 ##############################
 # Scratch Tests
